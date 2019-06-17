@@ -2,6 +2,7 @@
 *.class
 *.log
 *.pyc
+*.idea
 *.swp
 .DS_Store
 .atom/
