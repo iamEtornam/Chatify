@@ -18,13 +18,15 @@ class _ContactListPageState extends State<ContactListPage> {
           title: Text('Chatify Contacts'),
         ),
         body: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
           child: ListView.separated(
             itemCount: 50,
             separatorBuilder: (context, index) {
               return Divider();
             },
             itemBuilder: (context, index) {
-              return contactListTile('johnson', '0245436757', 'avatarUrl');
+              return contactListTile('Bryte', '+233240000000', 'avatarUrl');
             },
           ),
         ),
@@ -43,18 +45,15 @@ class _ContactListPageState extends State<ContactListPage> {
       ),
       subtitle: Text(phoneNumber,
           softWrap: true, overflow: TextOverflow.ellipsis, maxLines: 1),
-      trailing: Hero(
-        tag: 'to_signgle_chat',
-        child: IconButton(
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SingleChatPage()));
-          },
-          icon: Icon(
-            Entypo.getIconData('new-message'),
-            size: 20,
-            color: Colors.black,
-          ),
+      trailing: IconButton(
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => SingleChatPage()));
+        },
+        icon: Icon(
+          Entypo.getIconData('new-message'),
+          size: 20,
+          color: Colors.black,
         ),
       ),
     );
