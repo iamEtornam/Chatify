@@ -14,8 +14,8 @@ Weekend code hack. Implementation of a Chat App
 
 ## Art
 
-<img align="left" src="https://github.com/RegNex/Chatify/blob/master/screenshots/screen_1.png" width="200" height="400"/>
-<img src="https://github.com/RegNex/Chatify/blob/master/screenshots/screen_2.png" width="200" height="400"/>
+<img align="left" src="https://github.com/RegNex/Chatify/blob/master/screenshots/screen_1.png" height="500"/>
+<img src="https://github.com/RegNex/Chatify/blob/master/screenshots/screen_2.png" height="500"/>
 <img src="https://github.com/RegNex/Chatify/blob/master/screenshots/screen_3.png"  height="500"/>
 
 ## Getting Started
