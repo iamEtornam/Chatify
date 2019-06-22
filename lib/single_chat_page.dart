@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 class SingleChatPage extends StatefulWidget {
   @override
@@ -15,17 +16,90 @@ class _SingleChatPageState extends State<SingleChatPage> {
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            title: Text('johnson'),
+            title: Text('Bryte'),
             actions: <Widget>[
-              CircleAvatar(
-                radius: 15,
-                backgroundColor: Colors.red,
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: CircleAvatar(
+                  radius: 20,
+                  backgroundColor: Colors.red,
+                ),
               )
             ],
           ),
           body: Container(
             child: Column(
               children: <Widget>[chatList('2:00 am', 'hello there')],
+            ),
+          ),
+          bottomNavigationBar: Material(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+            elevation: 4,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: 50,
+              decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius:
+                      BorderRadius.vertical(top: Radius.circular(15))),
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: TextField(
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                  ),
+                  keyboardType: TextInputType.text,
+                  maxLines: 1,
+                  enableInteractiveSelection: true,
+                  decoration: InputDecoration(
+                    labelText: 'Say something...',
+                    alignLabelWithHint: true,
+                    hintStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.all(15.0),
+                    hasFloatingPlaceholder: false,
+                    suffixIcon: Container(
+                      width: 100,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          IconButton(
+                            icon: Icon(
+                              Entypo.getIconData('emoji-happy'),
+                              color: Colors.black,
+                            ),
+                            onPressed: () {},
+                          ),
+                          IconButton(
+                            icon: Icon(Entypo.getIconData('attachment'),
+                                color: Colors.black),
+                            onPressed: () {},
+                          ),
+                        ],
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    focusedErrorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    fillColor: Colors.white,
+                    filled: true,
+                    labelStyle: TextStyle(color: Colors.black, fontSize: 14),
+                    errorStyle: TextStyle(
+                      color: Colors.red,
+                    ),
+                  ),
+                ),
+              ),
             ),
           ),
         ));
@@ -75,6 +149,7 @@ class _SingleChatPageState extends State<SingleChatPage> {
                 right: 0.0,
                 child: Row(
                   children: <Widget>[
+                    SizedBox(width: 10.0),
                     Text(time,
                         style: TextStyle(
                           color: Colors.black38,
