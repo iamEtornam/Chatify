@@ -89,7 +89,7 @@ What things you need to run the app
 
 **Elikplim Sunu Eric**
 
-- [**Twitter**](https://twitter.com/BrainiacV12)
+- [**Twitter**](https://twitter.com/BrainiacV5)
 - [**Github**](https://github.com/BrainiacV12)
 
 ## License
